@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOG IN</title>
+</head>
+<body>
+    <!--Navbar-->
+    <div class="navbar">
+        <div class="logo"><a href="/">
+            L.O.V.E</a>
+        </div>
+        <div class="links">
+            <div class="lin1"></div>
+            <div class="lin2"></div>
+            <div class="lin3"><button><a class="outbtn" href="register">GET STARTED</a></button></div>
+        </div>
+    </div>
+<div class="finebody">
+    <!--Message-->
+    <div>
+    {% for message in messages %}
+    <p class='message'>
+    {{message}}
+    </p>
+    {% endfor %}
+    </div>
+
+    <!--Log In Form-->
+    <form action="" method="POST">
+        {% csrf_token %}
+        <p>Username</p>
+        <input type="text" name="username">
+        <p>password</p>
+        <input type="password" name="password"><br><br>
+        <input type="submit">
+    </form>
+</div>
+
+
+</body>
+</html>

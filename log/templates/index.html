@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOG IN LOG OUT FUN.</title>
+</head>
+<body>
+    
+<div class="navbar">
+    <div class="logo"><a href="/">
+        L.O.V.E</a>
+    </div>
+    
+        {% if user.is_authenticated %}
+        <div class="links">
+        <div class="lin1"><button><a href="logout">LOG OUT</a></button></div>
+        <div class="lin2"><button><a href="tables">TABLES</a></button>
+        <div class="lin3"><button><a href="blog">BLOGS</a></button></div>
+        </div>
+        </div>
+        {% else %}
+        <div class="links">
+        <div class="lin1"><button><a href="login.html">LOG IN</a></button></div>
+        <div class="lin2"><button><a href="register">GET STARTED</a></button></div>
+        <div class="lin3"><button><a href="blog">BLOGS</a></button></div>
+        </div>
+        {% endif %}
+</div>
+
+<div class="welcome">
+    {% if user.is_authenticated %}
+    <h2>Welcome, {{user.username}}</h2>
+    {% else %}
+    <h2>Welcome to your Future</h2>
+    {% endif %}
+
+</div>
+
+</body>
+</html>

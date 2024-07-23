@@ -1,0 +1,5 @@
+{% for shr in per_blog %}
+
+<h3><a href="{% url 'post' shr %}">{{ shr }}</a></h3> <br>
+
+{% endfor %}
