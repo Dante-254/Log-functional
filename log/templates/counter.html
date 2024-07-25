@@ -1,5 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span><h3>Span Header</h3></span>
+    <div><h3>div header</h3></div>
+
+    
+        <p><span style="background-color: chocolate;">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Ipsum nam excepturi rerum! Quos ut, corporis cupiditate,
+             explicabo excepturi blanditiis reiciendis suscipit repellendus,
+             illum doloribus adipisci asperiores.
+             Suscipit vero eaque doloribus!</span></p>
+    
+    <div style="background-color: rgb(96, 210, 30);">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis expedita,
+             laboriosam est adipisci animi facilis tempora ducimus voluptate alias inventore
+              nostrum natus quasi consequuntur itaque numquam necessitatibus voluptates ea cumque?</p>
+    </div>
+    
+
 {% for shr in per_blog %}
-
 <h3><a href="{% url 'post' shr %}">{{ shr }}</a></h3> <br>
-
 {% endfor %}
+
+
+
+</body>
+</html>

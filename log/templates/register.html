@@ -1,46 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'css/register.css' %}">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOG IN</title>
-</head>
-<body>
-    <div class="navbar">
-        <div class="logo"><a href="/">
-            L.O.V.E</a>
+{% extends 'base.html' %}
+{% block content %}
+        <div class="centerform">
+            <div class="fmchld">
+                <div class="messages">
+                {% for message in messages %}
+                <h3> {{message}}</h3>
+                {% endfor %}
+                </div>
+                <div class='form'>
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <h6>Username</h6>
+                    <input type="text" name="username">
+                    <h6>Email</h6>
+                    <input type="email" name="email">
+                    <h6>Password</h6>
+                    <input type="password" name="password">
+                    <h6>Re Enter Password</h6>
+                    <input type="password" name="password2"><br>
+                    <input type="submit">
+                </form>
+            </div>
+            </div>
         </div>
-        <div class="links">
-            <div class="lin2"></div>
-            <div class="lin1"><button><a href="login">LOG IN</a></button></div>
-            <div class="lin3"></div>
-        </div>
-    </div>
-   <div class="centerform">
-    <div class="fmchld">
-        <div class="messages">
-           {% for message in messages %}
-          <h3> {{message}}</h3>
-           {% endfor %}
-        </div>
-        <div class='form'>
-           <form action="" method="POST">
-             {% csrf_token %}
-             <h6>Username</h6>
-             <input type="text" name="username">
-             <h6>Email</h6>
-             <input type="email" name="email">
-             <h6>Password</h6>
-             <input type="password" name="password">
-             <h6>Re Enter Password</h6>
-             <input type="password" name="password2"><br>
-             <input type="submit">
-         </form>
-    </div>
-    </div>
-   </div>
-</body>
-</html>
+   {% endblock %}

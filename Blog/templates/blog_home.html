@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Home</title>
+    {% if title %}
+        <title>{{posts.author}}'s Blog</title>
+    {% else %}
+        <title>Blog Home</title>
+    {% endif %}    
 </head>
 <body>
-    <h2>Welcome To Blogs</h2>
+    <h2>Blogs</h2>
+    {% for posts in posts %}
+    <h1>{{posts.title}}</h1>
+    <p>By {{posts.author}}</p>
+    <p>{{posts.content}}</p>
+    {% endfor %}
 </body>
 </html>
