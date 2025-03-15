@@ -36,7 +36,7 @@ def register(request):
                 user.save
                 messages.success(request, 'Account created successfully')
                 user = auth.authenticate(username=username, password=password)
-                login_user(request, user)
+                login_user(request)
                 return redirect('/')
         else:
             messages.info(request, 'password not same')
