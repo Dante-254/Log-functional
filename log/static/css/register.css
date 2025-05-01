@@ -1,34 +1,30 @@
-*{
-    margin: 0;
-    text-align: none;
+* {
+  margin: 0;
+  text-align: none;
 }
-.centerform, .fmchld{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.centerform,
+.fmchld {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.centerform{
-   
-    width: 100%;
-    height: fit-content;
-    background-color: #275726;
-
+.centerform {
+  width: 100%;
+  height: fit-content;
 }
-.fmchld{
-    
-    background-color: rgb(255, 255, 255);
-    height: fit-content;
-    border-radius: 45px;
+.fmchld {
+  background-color: rgb(255, 255, 255);
+  height: fit-content;
+  border-radius: 45px;
 }
-form{
-    height: fit-content;
-    margin: 4px;
-    
+form {
+  height: fit-content;
+  margin: 4px;
 }
-form>h6, form>input {
-    margin: 9px;
+form > h6,
+form > input {
+  margin: 9px;
 }
-.messages>h3{
-    color: red;
+.messages > h3 {
+  color: red;
 }
-
