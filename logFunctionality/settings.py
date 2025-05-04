@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'log',
-    'Blog'
+    'Blog',
+    'frontendapp',
+
 ]
 
 MIDDLEWARE = [
@@ -122,6 +124,7 @@ STATIC_URL = '/static/'
 # Add this line
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'log/static'),
+    os.path.join(BASE_DIR, 'frontend/build/static'),
 
 ]
 

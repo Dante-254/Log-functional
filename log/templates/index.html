@@ -1,13 +1,4 @@
-{% extends 'base.html' %}
-{% block content %}
-
-<div class="welcome">
-    {% if user.is_authenticated %}
-    <h2>Welcome, {{user.username}}</h2>
-    {% else %}
-    <h2>Welcome to your Future</h2>
-    {% endif %}
-
-</div>
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div id="root" class="welcome"></div>
+<script src="{% static 'frontend/main.js' %}"></script>
 {% endblock %}
-
