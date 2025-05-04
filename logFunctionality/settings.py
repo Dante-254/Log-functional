@@ -124,9 +124,11 @@ STATIC_URL = '/static/'
 # Add this line
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'log/static'),
-    os.path.join(BASE_DIR, 'frontend/build/static'),
+    os.path.join(BASE_DIR, 'frontendapp/static/frontend_react/build/static'),
+    
 
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'collect_static')
 
 
 # Default primary key field type

@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    text-align: none;
+}
+.navbar{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 0.7in;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px;
+    height: 0.5in;
+    font-weight: bolder;
+    width: 1in;
+    font-size: x-large;
+    color: #3a7d47 ;
+}
+.links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 2.5in;
+}
+.lin3, .lin1{
+    text-decoration: none;
+}
+
+.lin3:hover{
+    color: antiquewhite;
+}
+a{
+    text-decoration: none;
+}
+.outbtn{
+    text-decoration: none;
+}
+.message{
+    color: darkred;
+    font-weight: 900;
+}
